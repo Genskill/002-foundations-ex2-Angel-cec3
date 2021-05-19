@@ -6,16 +6,15 @@ int main(void){
 int type = get_int("Enter type of pattern(1 or 2)");
 int r = get_int("Number of rows");
 int n = r;
- switch(type){
-case 1:
+ if(type==1){
 	for(int row=0;row<r;row++){
 		for(int col=r;col>row;col--){
 			printf("#");
 		}
 		printf("\n");
 	}
-	break;
-case 2:
+}
+else{
 	for(int row=1;row<=r;row++){
 		for(int col=1;col<=r;col++){
 			if(col>n-1){
@@ -28,8 +27,5 @@ case 2:
 		n--;
 		printf("\n");
 	}
-	break;
-default:
-	printf("Error");		
 }
 }
